@@ -152,7 +152,8 @@ class IQOptionAPI(object):  # pylint: disable=too-many-instance-attributes
     leaderboard_userinfo_deals_client = None
     users_availability = None
     # ------------------
-
+    digital_payout = None
+    
     def __init__(self, host, username, password, proxies=None):
         """
         :param str host: The hostname or ip address of a IQ Option server.
@@ -911,3 +912,11 @@ class IQOptionAPI(object):  # pylint: disable=too-many-instance-attributes
     @property
     def Get_Users_Availability(self):
         return Get_users_availability(self)
+    
+    @property
+    def subscribe_digital_price_splitter(self):
+        return SubscribeDigitalPriceSplitter(self)
+
+    @property
+    def unsubscribe_digital_price_splitter(self):
+        return UnsubscribeDigitalPriceSplitter(self)
