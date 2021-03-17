@@ -1549,4 +1549,3 @@ class IQ_Option:
 
     def logout(self):
         self.api.logout()
-        
